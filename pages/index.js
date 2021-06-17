@@ -1,15 +1,17 @@
 import Head from 'next/head';
-import Link from 'next/link';
 import Image from 'next/image';
-import styles from '../styles/Home.module.css';
 import { useEffect } from 'react';
+import styles from '../styles/Home.module.css';
+import Card from '../components/Card';
+import Footer from '../components/Footer';
+import { INSTAGRAM,FACEBOOK,LINKEDIN,GITHUB } from '../helpers/global-variables';
 
 export default function Home() {
-useEffect(()=>{
-  if (document.getElementsByTagName("html")) {
-    document.getElementsByTagName("html")[0].setAttribute("lang", "en")
-  }
-},[])
+  useEffect(() => {
+    if (document.getElementsByTagName("html")) {
+      document.getElementsByTagName("html")[0].setAttribute("lang", "en")
+    }
+  }, [])
   return (
     <div className={styles.container}>
       <Head>
@@ -20,70 +22,39 @@ useEffect(()=>{
 
       <main className={styles.main}>
         <div className={styles.imageContainer}>
-        <Image className={styles.image} alt="profile image" src="/images/AMINE AMINE - BRIGHT LAB.jpg" width={800} height={800}/>
+          <Image className={styles.image} alt="profile image" src="/images/AMINE AMINE - BRIGHT LAB.jpg" width={800} height={800} />
         </div>
         <h1 className={styles.title}>
           Welcome to Amine Portfolio
         </h1>
 
         <div className={styles.grid}>
-          <div className={styles.card}>
-            <Link href="https://www.linkedin.com/in/amine-amine-885137153">
-              <>
-                <h2>Linked In &rarr;</h2>
-                <p>Check my work Experience in full stack development.</p>
-              </>
-            </Link>
-          </div>
+          <Card
+            url={LINKEDIN}
+            title="Linked In"
+            desc="Check my work Experience in full stack development."
+          />
 
-          <div className={styles.card}>
-          <Link
-            href="https://github.com/aminects"
-          >
-            <>
-              <h2>Github &rarr;</h2>
-              <p>CHeck my projects and applications.</p>
-            </>
-          </Link>
-          </div>
+          <Card
+            url={GITHUB}
+            title="Github"
+            desc="Check my projects and applications."
+          />
 
-          <div className={styles.card}>
-          <Link href="https://www.instagram.com/aminee.a/" className={styles.card}>
-            <>
-              <h2>Instagram &rarr;</h2>
-              <p>Check my posts and stories.</p>
-            </>
-          </Link>
-          </div>
+          <Card
+            url={INSTAGRAM}
+            title="Instagram"
+            desc="Check my posts and stories."
+          />
 
-          <div className={styles.card}>
-          <Link
-            href="https://www.facebook.com/people/Amine-Amine/100022631154224/?viewas=100000686899395"
-            className={styles.card}
-          >
-            <>
-              <h2>Facebook &rarr;</h2>
-              <p>
-                CHeck my facebook page.
-              </p>
-            </>
-          </Link>
-          </div>
+          <Card
+            url={FACEBOOK}
+            title="Facebook"
+            desc="Check my facebook page."
+          />
         </div>
       </main>
-
-      <footer className={styles.footer}>
-        <Link
-          href="https://github.com/aminects"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <span>
-            Powered by{' '}
-            <span className={styles.logo}>Amine-Next-JS</span>
-          </span>
-        </Link>
-      </footer>
+      <Footer/>
     </div>
   )
 }
