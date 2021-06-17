@@ -1,7 +1,15 @@
-import Head from 'next/head'
-import styles from '../styles/Home.module.css'
+import Head from 'next/head';
+import Link from 'next/link';
+import Image from 'next/image';
+import styles from '../styles/Home.module.css';
+import { useEffect } from 'react';
 
 export default function Home() {
+useEffect(()=>{
+  if (document.getElementsByTagName("html")) {
+    document.getElementsByTagName("html")[0].setAttribute("lang", "en")
+  }
+},[])
   return (
     <div className={styles.container}>
       <Head>
@@ -11,51 +19,70 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
+        <div className={styles.imageContainer}>
+        <Image className={styles.image} alt="profile image" src="/images/AMINE AMINE - BRIGHT LAB.jpg" width={800} height={800}/>
+        </div>
         <h1 className={styles.title}>
           Welcome to Amine Portfolio
         </h1>
 
         <div className={styles.grid}>
+          <div className={styles.card}>
+            <Link href="https://www.linkedin.com/in/amine-amine-885137153">
+              <>
+                <h2>Linked In &rarr;</h2>
+                <p>Check my work Experience in full stack development.</p>
+              </>
+            </Link>
+          </div>
 
-          <a href="https://www.linkedin.com/in/amine-amine-885137153" className={styles.card}>
-            <h2>Linked In &rarr;</h2>
-            <p>Check my work Experience in full stack development.</p>
-          </a>
-
-          <a
+          <div className={styles.card}>
+          <Link
             href="https://github.com/aminects"
-            className={styles.card}
           >
-            <h2>Github &rarr;</h2>
-            <p>CHeck my projects and applications.</p>
-          </a>
+            <>
+              <h2>Github &rarr;</h2>
+              <p>CHeck my projects and applications.</p>
+            </>
+          </Link>
+          </div>
 
-          <a href="https://www.instagram.com/aminee.a/" className={styles.card}>
-            <h2>Instagram &rarr;</h2>
-            <p>Check my posts and stories.</p>
-          </a>
+          <div className={styles.card}>
+          <Link href="https://www.instagram.com/aminee.a/" className={styles.card}>
+            <>
+              <h2>Instagram &rarr;</h2>
+              <p>Check my posts and stories.</p>
+            </>
+          </Link>
+          </div>
 
-          <a
+          <div className={styles.card}>
+          <Link
             href="https://www.facebook.com/people/Amine-Amine/100022631154224/?viewas=100000686899395"
             className={styles.card}
           >
-            <h2>Facebook &rarr;</h2>
-            <p>
-              CHeck my facebook page.
-            </p>
-          </a>
+            <>
+              <h2>Facebook &rarr;</h2>
+              <p>
+                CHeck my facebook page.
+              </p>
+            </>
+          </Link>
+          </div>
         </div>
       </main>
 
       <footer className={styles.footer}>
-        <a
+        <Link
           href="https://github.com/aminects"
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
-          <span className={styles.logo}>Amine-Next-JS</span>
-        </a>
+          <span>
+            Powered by{' '}
+            <span className={styles.logo}>Amine-Next-JS</span>
+          </span>
+        </Link>
       </footer>
     </div>
   )
