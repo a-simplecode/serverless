@@ -14,28 +14,28 @@ export default function Footer() {
                     <Link
                         href={GITHUB}
                     >
-                        <a target="_blank"><SVGGithub /></a>
+                        <a target="_blank">{<SVGGithub /> ?? "Github"}</a>
                     </Link>
                 </span>
                 <span className={styles.icons}>
                     <Link
                         href={LINKEDIN}
                     >
-                        <a target="_blank"><SVGLinkedin /></a>
+                        <a target="_blank">{<SVGLinkedin /> ?? "Linkedin"}</a>
                     </Link>
                 </span>
                 <span className={styles.icons}>
                     <Link
                         href={INSTAGRAM}
                     >
-                        <a target="_blank"><SVGInstagram /></a>
+                        <a target="_blank">{<SVGInstagram /> ?? "Instagram"}</a>
                     </Link>
                 </span>
                 <span className={styles.icons}>
                     <Link
                         href={FACEBOOK}
                     >
-                        <a target="_blank"><SVGFacebook /></a>
+                        <a target="_blank">{<SVGFacebook /> ?? "Facebook"}</a>
                     </Link>
                 </span>
             </div>
