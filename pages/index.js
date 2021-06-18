@@ -20,6 +20,7 @@ export default function Home() {
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
+      <Image className={styles.imgBackground} alt="background image" src="/images/dev_Background.jpeg" width={799} height={396} />
       <main className={styles.main}>
         <div className={styles.imageContainer}>
           <Image className={styles.image} alt="profile image" src="/images/AMINE AMINE - BRIGHT LAB.jpg" width={800} height={800} />
