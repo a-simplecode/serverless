@@ -32,7 +32,8 @@ export default function Home() {
               </Parallax>
           </div>
             <h1 className={styles.title}>
-              Welcome to Amine Portfolio
+              <div><b>Welcome to Amine</b></div>
+              <div><i>Portfolio</i></div>
             </h1>
 
             <div className={styles.grid}>
