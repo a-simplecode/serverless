@@ -5,7 +5,7 @@ async function setup() {
 
     try {
         
-        const db = await sqlite.open({ filename :'./mydb.sqlite', driver: sqlite3.Database});
+        const db = await sqlite.open({ filename :'./mydb.sqlite', driver: sqlite3.cached.Database});
         await db.migrate({ force: 'last' }) //just in development means last version
 
     } catch (error) {
