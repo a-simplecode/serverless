@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "node ./database-sqlite.js && next dev",
-    "build": "next build",
+    "build": "node ./database-sqlite.js && next build",
     "start": "next start",
     "lint": "next lint"
   },
