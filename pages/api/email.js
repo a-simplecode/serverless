@@ -1,10 +1,11 @@
 const sgMail = require("@sendgrid/mail");
+require('dotenv').config();
 
 export default (req, res) => {
   const body = JSON.parse(req.body);
 
   sgMail.setApiKey(
-    "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"
+      process.env.EMAIL_KEY
   );
   const msg = {
     to: "amineamine.dev@gmail.com",
