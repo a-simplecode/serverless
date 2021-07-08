@@ -6,6 +6,7 @@ import styles from '../styles/Home.module.css';
 import Card from '../components/Card';
 import Footer from '../components/Footer';
 import { INSTAGRAM, FACEBOOK, LINKEDIN, GITHUB } from '../helpers/global-variables';
+import GetInTouch from '../components/GetInTouch';
 
 export default function Home() {
   useEffect(() => {
@@ -61,6 +62,7 @@ export default function Home() {
                 desc="Check my facebook page."
               />
             </div>
+            <GetInTouch/>
         </main>
           <Footer />
       </div>
