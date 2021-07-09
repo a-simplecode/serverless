@@ -3,7 +3,7 @@ const sgMail = require("@sendgrid/mail");
 export default function email(req, res){
   const body = JSON.parse(req.body);
   
-  sgMail.setApiKey(process.env.EMAIL_KEY);
+  sgMail.setApiKey(process.env.NEXT_PUBLIC_EMAIL_KEY);
   const msg = {
     to: "amineamine.dev@gmail.com",
     from: "aamine@bright-lab.com",
