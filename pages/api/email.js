@@ -1,5 +1,4 @@
 const sgMail = require("@sendgrid/mail");
-require("dotenv").config();
 
 export default function email(req, res){
   const body = JSON.parse(req.body);
