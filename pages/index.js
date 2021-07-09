@@ -69,3 +69,12 @@ export default function Home() {
     </ParallaxProvider>
       )
 }
+
+export async function getServerSideProps() {
+
+  return {
+      props: {
+      }
+  }
+
+};
