@@ -3,7 +3,7 @@ require("dotenv").config();
 
 export default function email(req, res){
   const body = JSON.parse(req.body);
-
+  console.log("EMAIL_KEY",process.env.EMAIL_KEY);
   sgMail.setApiKey(process.env.EMAIL_KEY);
   const msg = {
     to: "amineamine.dev@gmail.com",
