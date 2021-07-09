@@ -1,7 +1,7 @@
 const sgMail = require("@sendgrid/mail");
 require("dotenv").config();
 
-export default (req, res) => {
+export default function email(req, res){
   const body = JSON.parse(req.body);
 
   sgMail.setApiKey(process.env.EMAIL_KEY);

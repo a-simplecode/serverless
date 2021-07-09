@@ -24,12 +24,12 @@ const Validate = (values) => {
 };
 
 export default function GetInTouch() {
+
   const submitEmail = async (values, setSubmitting) => {
     const result = await fetch("/api/email", {
       method: "post",
       body: JSON.stringify(values),
     });
-
 
     toast.info(<div><h3>Success</h3>Thank you for your message!</div>)
 
@@ -38,7 +38,7 @@ export default function GetInTouch() {
 
   return (
     <div className={styles.container}>
-      <h1 className="text-center">Let's Get In Touch</h1>
+      <h1 className="text-center">Let&apos;s Get In Touch</h1>
       <Formik
         initialValues={{
           email: "",
