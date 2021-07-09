@@ -1,5 +1,6 @@
 import { Formik, Form, Field, ErrorMessage } from "formik";
 import styles from "../styles/GetInTouch.module.css";
+import { toast } from 'react-toastify';
 
 const Validate = (values) => {
   const errors = {};
@@ -28,6 +29,9 @@ export default function GetInTouch() {
       method: "post",
       body: JSON.stringify(values),
     });
+
+
+    toast.info(<div><h3>Success</h3>Thank you for your message!</div>)
 
     setSubmitting(false);
   };

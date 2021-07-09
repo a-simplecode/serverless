@@ -46,3 +46,7 @@ a {
   justify-content: center;
   align-items: center;
 }
+
+.Toastify__toast--info{
+  background: #0d6efd !important;
+}

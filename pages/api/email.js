@@ -1,12 +1,10 @@
 const sgMail = require("@sendgrid/mail");
-require('dotenv').config();
+require("dotenv").config();
 
 export default (req, res) => {
   const body = JSON.parse(req.body);
 
-  sgMail.setApiKey(
-      process.env.EMAIL_KEY
-  );
+  sgMail.setApiKey(process.env.EMAIL_KEY);
   const msg = {
     to: "amineamine.dev@gmail.com",
     from: "aamine@bright-lab.com",
@@ -15,10 +13,9 @@ export default (req, res) => {
     html: `<p><h3>${body.subject}</h3> ${body.message}</p>`,
   };
 
-  sgMail //to me 
+  sgMail //to me
     .send(msg)
     .then(() => {
-        console.log('email 1 sent')
       const msg = {
         to: body.email,
         from: "aamine@bright-lab.com",
@@ -41,15 +38,15 @@ export default (req, res) => {
       sgMail // to the user
         .send(msg)
         .then(() => {
-            console.log('email 2 sent')
+          res.status(200).json({ status: "Ok" });
         })
         .catch((error) => {
           console.error(error);
+          res.status(400).json({ status: "Second Email failed" });
         });
-
     })
     .catch((error) => {
       console.error(error);
+      res.status(400).json({ status: "First Email failed" });
     });
-  res.status(200).json({ status: "Ok" });
 };
