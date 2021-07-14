@@ -8,11 +8,6 @@ import { INSTAGRAM, FACEBOOK, LINKEDIN, GITHUB } from '../helpers/global-variabl
 import GetInTouch from '../components/GetInTouch';
 
 export default function Home() {
-  useEffect(() => {
-    if (document.getElementsByTagName("html")) {
-      document.getElementsByTagName("html")[0].setAttribute("lang", "en")
-    }
-  }, [])
   return (
     <ParallaxProvider>
       <div className={styles.container}>
