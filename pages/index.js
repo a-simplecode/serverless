@@ -1,5 +1,4 @@
 import Image from 'next/image';
-import { useEffect } from 'react';
 import { ParallaxProvider, Parallax } from 'react-scroll-parallax';
 import styles from '../styles/Home.module.css';
 import Card from '../components/Card';
