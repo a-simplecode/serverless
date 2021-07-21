@@ -7,3 +7,9 @@
     border-radius: 10px;
     box-shadow: 0 5px 25px 0 rgba(0,0,0,.2);
 }
+
+.container:hover{
+    color: #0070f3;
+    border-color: #0070f3;
+    box-shadow: 0 5px 25px 0 rgba(0, 113, 243,.4);
+}

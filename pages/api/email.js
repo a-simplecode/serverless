@@ -9,12 +9,17 @@ dayjs.extend(timezone);
 export default async function email(req, res) {
   const body = JSON.parse(req.body);
 
-  const client = await MongoClient.connect(process.env.NEXT_MONGODB_KEY);
-  const db = client.db();
-  await db
-    .collection("emails")
-    .insertOne({ ...body, date: dayjs().format("YYYY-MM-DD HH:mm:ss") });
-  client.close();
+  try {
+    const client = await MongoClient.connect(process.env.NEXT_MONGODB_KEY);
+    const db = client.db();
+    const result = await db
+      .collection("emails")
+      .insertOne({ ...body, date: dayjs().format("YYYY-MM-DD HH:mm:ss") });
+    client.close();
+  
+  } catch (error) {
+    console.log("DB_ERROR",error.message)
+  }
 
   sgMail.setApiKey(process.env.NEXT_PUBLIC_EMAIL_KEY);
   const msg = {
@@ -24,7 +29,6 @@ export default async function email(req, res) {
     text: body.subject,
     html: `<p><h3>${body.subject}</h3> ${body.message}</p>`,
   };
-
   sgMail //to me
     .send(msg)
     .then(() => {
