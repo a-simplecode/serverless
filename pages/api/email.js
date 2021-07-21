@@ -1,8 +1,21 @@
 const sgMail = require("@sendgrid/mail");
+import { MongoClient } from "mongodb";
+import dayjs from "dayjs";
+import utc from "dayjs/plugin/utc";
+import timezone from "dayjs/plugin/timezone";
+dayjs.extend(utc);
+dayjs.extend(timezone);
 
-export default function email(req, res){
+export default async function email(req, res) {
   const body = JSON.parse(req.body);
-  
+
+  const client = await MongoClient.connect(process.env.NEXT_MONGODB_KEY);
+  const db = client.db();
+  await db
+    .collection("emails")
+    .insertOne({ ...body, date: dayjs().format("YYYY-MM-DD HH:mm:ss") });
+  client.close();
+
   sgMail.setApiKey(process.env.NEXT_PUBLIC_EMAIL_KEY);
   const msg = {
     to: "amineamine.dev@gmail.com",
@@ -48,4 +61,4 @@ export default function email(req, res){
       console.error(error);
       res.status(400).json({ status: "First Email failed" });
     });
-};
+}
