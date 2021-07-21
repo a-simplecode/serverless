@@ -24,6 +24,10 @@ a {
   color: #0d6efd;
 }
 
+.secondaryColor{
+  color: #0070f3;
+}
+
 .small{
   font-size: small;
 }
@@ -49,4 +53,8 @@ a {
 
 .Toastify__toast--info{
   background: #0d6efd !important;
+}
+
+.fullWidth{
+  width: 94%;
 }

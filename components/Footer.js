@@ -26,7 +26,7 @@ export default function Footer() {
         {ICON(<SVGFacebook />, FACEBOOK)}
       </div>
       <div className="mt-4">
-        Powered by <b>Amine-Next-JS</b>
+        Powered by <b className="link" onClick={()=>window.open('https://serverless-aminects.vercel.app/')}> &lt;SimpleCode/&gt; </b> - 2021
       </div>
     </footer>
   );

@@ -47,6 +47,20 @@
     Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
+.einstein{
+  background-image: url('../public/images/Einstein.jpg');
+  background-repeat: no-repeat, repeat;
+  background-color: #cccccc;
+  background-size: cover;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.einstein:hover{
+  border-color: #0070f3;
+  box-shadow: 15px 15px 25px 0 rgba(0, 113, 243,.4);
+}
+
 .grid {
   display: flex;
   align-items: center;
