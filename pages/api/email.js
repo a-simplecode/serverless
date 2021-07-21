@@ -10,7 +10,7 @@ export default async function email(req, res) {
   const body = JSON.parse(req.body);
 
   try {
-    const client = await MongoClient.connect(process.env.NEXT_MONGODB_KEY);
+    const client = await MongoClient.connect(process.env.NEXT_PUBLIC_MONGODB_KEY);
     const db = client.db();
     const result = await db
       .collection("emails")
