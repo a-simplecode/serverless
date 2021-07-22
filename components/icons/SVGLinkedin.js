@@ -10,7 +10,7 @@ export default function SVGLinkedin(props) {
       {...props}
     >
       <path
-        fill="#0078d4"
+        fill="#0070f3"
         d="M42 37a5 5 0 01-5 5H11a5 5 0 01-5-5V11a5 5 0 015-5h26a5 5 0 015 5v26z"
       />
       <path

@@ -41,13 +41,14 @@ export default function Home() {
           </h1>
           <h3 className="secondaryColor">Software Engineer | Web Developer</h3>
 
-            <div className="p-5">
-              <i>
-                <b>Einstein’s</b> famous quote — “Everything should be made as
-                simple as possible, but not simpler.”
-              </i>
-            </div>
-            <div className={cn(styles.einstein,"fullWidth")}>
+          <div className="p-5">
+            <i>
+              <b>Einstein’s</b> famous quote — “Everything should be made as
+              simple as possible, but not simpler.”
+            </i>
+          </div>
+          <div className={cn(styles.einstein, "fullWidth")}>
+            <div className={styles.overlay}></div>
             <h3 className="pb-4">My Thoughts on Simplicity</h3>
             <p className="pb-2">
               I’m a fan of simple and simplicity. When I tackle a topic, I don’t

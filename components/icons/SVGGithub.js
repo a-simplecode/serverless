@@ -17,8 +17,8 @@ export default function SVGGithub(props) {
         y2={23.508}
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset={0} stopColor="#4c4c4c" />
-        <stop offset={1} stopColor="#343434" />
+        <stop offset={0} stopColor="#0070f3" />
+        <stop offset={1} stopColor="#0070f3" />
       </linearGradient>
       <path
         fill="url(#prefix__a)"

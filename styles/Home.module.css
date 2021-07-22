@@ -12,7 +12,7 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  margin-top: -108px
+  margin-top: -108px;
 }
 
 .title {
@@ -23,7 +23,7 @@
   text-align: center;
 }
 
-.imgBackground{
+.imgBackground {
   border-bottom-left-radius: 10px;
   border-bottom-right-radius: 10px;
 }
@@ -33,7 +33,7 @@
   max-width: 250px;
 }
 
-.image{
+.image {
   border-radius: 50%;
   box-shadow: 0 8px 11px 0 rgb(0 113 243 / 40%);
 }
@@ -47,18 +47,33 @@
     Bitstream Vera Sans Mono, Courier New, monospace;
 }
 
-.einstein{
-  background-image: url('../public/images/Einstein.jpg');
+.einstein {
+  background-image: url("../public/images/Einstein.jpg");
   background-repeat: no-repeat, repeat;
   background-color: #cccccc;
   background-size: cover;
   padding: 2rem;
   border-radius: 10px;
+  color: white;
+  position: relative;
 }
 
-.einstein:hover{
+.einstein:hover {
   border-color: #0070f3;
-  box-shadow: 15px 15px 25px 0 rgba(0, 113, 243,.4);
+  box-shadow: 15px 15px 25px 0 rgba(0, 113, 243, 0.4);
+}
+.overlay {
+  position: absolute;
+  background-color: rgb(4, 113, 241, 0.3);
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 10px;
+}
+
+.overlay:hover {
+  opacity: 0;
 }
 
 .grid {
