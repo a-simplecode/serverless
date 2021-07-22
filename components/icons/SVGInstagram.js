@@ -16,13 +16,6 @@ export default function SVGInstagram(props) {
         r={44.899}
         gradientUnits="userSpaceOnUse"
       >
-        <stop offset={0} stopColor="#fd5" />
-        <stop offset={0.328} stopColor="#ff543f" />
-        <stop offset={0.348} stopColor="#fc5245" />
-        <stop offset={0.504} stopColor="#e64771" />
-        <stop offset={0.643} stopColor="#d53e91" />
-        <stop offset={0.761} stopColor="#cc39a4" />
-        <stop offset={0.841} stopColor="#c837ab" />
       </radialGradient>
       <path
         fill="url(#prefix__a)"
