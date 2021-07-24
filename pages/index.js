@@ -103,7 +103,7 @@ export async function getStaticProps() {
       einsteinSection2:"It happens when I find the elegant path or the simple truth.",
       einsteinSection3:"Sometimes I see simplicity as a means to an end — where the end is a simpler understanding or a simpler result or a simpler way to share. Sometimes I have to look backward to find simplicity — I can’t always find simple up front, but sometimes when I look back, it was there all along, either hidden among the chaos, or I just didn’t have the right lens.",
       einsteinSection4:"The most important thing I’ve learned about simplicity is that simplicity wins in the long run. Simple is stickier than complexity, and it survives. I think nature teaches us that, and we learn it time and again in work and in life.",
-      aboutMe:"I'am a full stack developer specialized in Web Development as Next JS (SSR), React JS (Hooks and context), JavaScript, Redux, HTML, CSS. I also write the simplest code possible, fully SEO and code reusability with high performance for having the best websites."
+      aboutMe:"I'am a full stack developer specialized in Web Development as Next JS (Pre-rendering), React JS (Hooks and context), JavaScript, Redux, HTML, CSS. I also write the simplest code possible, fully SEO and code reusability with high performance for having the best websites."
     },
   };
 }
