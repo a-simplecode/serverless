@@ -42,7 +42,7 @@ export default function Home(props) {
           <h3 className="secondaryColor">Software Engineer | Web Developer</h3>
 
 
-          <div className="fullWidth mt-4">
+          <div className="fullWidth mt-4 card">
             <h3 className="pb-4">About me</h3>
             <div>{props.aboutMe}</div>
           </div>
